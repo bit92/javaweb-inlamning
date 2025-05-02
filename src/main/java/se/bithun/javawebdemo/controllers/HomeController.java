@@ -1,6 +1,7 @@
 package se.bithun.javawebdemo.controllers;
 
-import org.bithun.javawebdemo.models.POPSingerRepository;
+import se.bithun.javawebdemo.models.POPSingerRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 
@@ -16,7 +17,7 @@ public class HomeController extends BaseController {
     public String home(Model model) {
 
         model.addAttribute("singer", popsingerRepository.findAll());
-        model.addAttribute("user", "Mim");
+        model.addAttribute("user", "Bithun");
 
         return "home";
     }
